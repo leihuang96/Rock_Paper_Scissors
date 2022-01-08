@@ -1,0 +1,74 @@
+/*global style*/
+:root {
+  --main-font: sans-serif;
+  --main-bg-color: BLANCHEDALMOND;
+  --primary-blue: MIDNIGHTBLUE;
+  --primary-brown: PERU;
+  font-family: 'Permanent Marker', cursive;
+}
+
+/* Main background style */
+body {
+  background-image: url(./img/bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--main-bg-color);
+}
+
+.game-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.player-container {
+  background-color: rgb(70, 70, 70);
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 20px;
+  width: 400px;
+  height: 320px;
+}
+
+.computer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: darkkhaki;
+  height: 30%;
+  width: 30%;
+}
+
+.player-choices {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: darkmagenta;
+}
+
+.computer-choices {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: darkmagenta;
+  border: 5px, solid, darksalmon;
+}

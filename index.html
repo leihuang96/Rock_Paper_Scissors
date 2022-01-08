@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container">
+        <header class="game-name">
+            <h1>Do you wanna play a game?</h1>
+        </header>
+        <div class="game-container">
+            <div class="player-container">
+                <div class="player-title">
+                    <h1>Player</h1>
+                </div>
+                <div class="player-score">
+                    <p id="playerScore"> Score: 0 </p>
+                </div>
+                <div class="playerchoices">
+                    <button id="rockBtn">
+                        <p>Rock</p>
+                    </button>
+                    <button id="paperBtn">
+                        <p>Paper</p>
+                    </button>
+                    <button id="scissorsBtn">
+                        <p>Scissors</p>
+                    </button>
+                </div>
+            </div>
+            <div class="computer-container">
+                <div class="computer-title">
+                    <h1>Computer</h1>
+                </div>
+                <div class="computer-score">
+                    <p id="computerScore">Score: 0</p>
+                </div>
+                <div class="computer-choices">
+                    <p id="computerChoice">Waiting for your choice...</p>
+                </div>
+            </div>
+        </div>
+        <div class="result-container">
+            <h1 id="result">
+                Waiting for your choice
+            </h1>
+        </div>
+        <footer class="footer">
+            <p>
+                Copyright ©
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+                lei
+            </p>
+            <a href="https://github.com/leihuang96" target="_blank">
+                <i class="fab fa-github"></i></a>
+        </footer>
+        <script src="app.js"></script>
+</body>
+
+</html>
