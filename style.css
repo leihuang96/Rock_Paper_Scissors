@@ -1,9 +1,9 @@
 /*global style*/
 :root {
   --main-font: sans-serif;
-  --main-bg-color: BLANCHEDALMOND;
-  --primary-blue: MIDNIGHTBLUE;
-  --primary-brown: PERU;
+  --main-bg-color: rgba(221, 221, 221, 0.815);
+  --primary-blue: rgb(25, 25, 112, 0.4);
+  --primary-brown: rgb(205, 133, 63, 0.4);
   font-family: 'Permanent Marker', cursive;
 }
 
@@ -19,12 +19,11 @@ body {
 }
 
 .main-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
   background-color: var(--main-bg-color);
 }
 
@@ -37,38 +36,50 @@ body {
 }
 
 .player-container {
-  background-color: rgb(70, 70, 70);
+  background-color: var(--primary-brown);
   border-radius: 10px;
-  text-transform: uppercase;
-  font-weight: bold;
   margin: 20px;
   width: 400px;
   height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .computer-container {
+  background-color: var(--primary-brown);
+  border-radius: 10px;
+  margin: 20px;
+  width: 400px;
+  height: 320px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background-color: darkkhaki;
-  height: 30%;
-  width: 30%;
+  align-items: center;
 }
 
-.player-choices {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
   width: 100%;
-  background-color: darkmagenta;
+  color: rgb(0, 0, 0);
+  text-align: center;
 }
 
-.computer-choices {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  background-color: darkmagenta;
-  border: 5px, solid, darksalmon;
+button {
+  background-color: var(--primary-blue);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
