@@ -13,6 +13,9 @@ const rockBtn = document.getElementById('rockBtn');
 const paperBtn = document.getElementById('paperBtn');
 const scissorsBtn = document.getElementById('scissorsBtn');
 const computerChoice = document.getElementById('computerChoice');
+const gameOver = document.getElementById('gameOver');
+const endgameMsg = document.getElementById('endgameMsg');
+const restartBtn = document.getElementById('restartBtn');
 
 // set rule for the game
 function playRound(playerSelection, computerSelection) {
@@ -59,13 +62,33 @@ function computerPlay() {
 rockBtn.addEventListener('click', () => handleClick('Rock'));
 paperBtn.addEventListener('click', () => handleClick('Paper'));
 scissorsBtn.addEventListener('click', () => handleClick('Scissors'));
+restartBtn.addEventListener('click', () => handlerestart());
 
-// get user's selection and let the game run
+// get user's selection and let the game run, the first to five win
 function handleClick(playerSelection) {
-  const computerSelection = computerPlay();
-  playRound(playerSelection, computerSelection);
-  playerScore.textContent = `Score: ${playerScoreCount}`;
-  computerScore.textContent = `Score: ${computerScoreCount}`;
-  result.textContent = resultMessage;
-  computerChoice.textContent = computerGuess;
+  if (playerScoreCount === 5) {
+    endgameMsg.textContent = 'Congrats! You Win!';
+    gameOver.classList.add('active');
+  } else if (computerScoreCount === 5) {
+    endgameMsg.textContent = 'Oops! You lose!';
+    gameOver.classList.add('active');
+  } else {
+    const computerSelection = computerPlay();
+    playRound(playerSelection, computerSelection);
+    playerScore.textContent = `Score: ${playerScoreCount}`;
+    computerScore.textContent = `Score: ${computerScoreCount}`;
+    result.textContent = resultMessage;
+    computerChoice.textContent = computerGuess;
+  }
+}
+
+// restart the game
+function handlerestart() {
+  playerScoreCount = 0;
+  computerScoreCount = 0;
+  gameOver.classList.remove('active');
+  playerScore.textContent = 'Score: 0';
+  computerScore.textContent = 'Score: 0';
+  result.textContent = 'Waiting for your choice';
+  computerChoice.textContent = 'Waiting for your choice';
 }
